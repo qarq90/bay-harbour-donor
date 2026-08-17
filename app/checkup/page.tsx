@@ -1,6 +1,6 @@
 import Client from "./client";
 
-export default function Home() {
+export default function Checkup() {
     return (
         <>
             <Client />

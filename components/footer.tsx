@@ -1,4 +1,5 @@
-"use client";;
+"use client";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
@@ -10,6 +11,8 @@ export default function Footer() {
     }
 
     return (
-        <footer className="w-full max-w-6xl mx-auto backdrop-blur-sm border-t border-blood/10 mt-auto"></footer>
+        <footer className="w-full mx-auto backdrop-blur-sm border-t border-blood/10 mt-auto">
+            
+        </footer>
     );
 }

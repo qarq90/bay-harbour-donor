@@ -20,13 +20,13 @@ export default function Navbar() {
     const applyTheme = (dark: boolean) => {
         const root = document.documentElement;
         if (dark) {
-            root.style.setProperty("--background", "#191919");
-            root.style.setProperty("--foreground", "#efefef");
-            root.style.setProperty("--tertairy", "#242424");
+            root.style.setProperty("--background", "#202020");
+            root.style.setProperty("--foreground", "#dddddd");
+            root.style.setProperty("--tertairy", "#333333");
             root.classList.add("dark");
         } else {
-            root.style.setProperty("--background", "#efefef");
-            root.style.setProperty("--foreground", "#191919");
+            root.style.setProperty("--background", "#dddddd");
+            root.style.setProperty("--foreground", "#202020");
             root.style.setProperty("--tertairy", "#c2c2c2");
             root.classList.remove("dark");
         }
@@ -74,14 +74,14 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="backdrop-blur-md z-50 fixed top-0 left-0 right-0 flex justify-around items-center px-86 py-4 bg-transparent w-full mx-auto">
-                <Link className="flex flex-row gap-3 items-center min-w-[200px]" href="/">
-                    <MdBloodtype
-                        size={32}
-                        className="text-blood flex-shrink-0"
-                    />
-                    <Text className="uppercase tracking-widest text-2xl im-fell-dw-pica-regular whitespace-nowrap">
-                        Bloodbourne
+            <nav className="backdrop-blur-xl shadow-lg z-50 fixed top-0 left-0 right-0 flex justify-around items-center px-86 py-4 bg-background w-full mx-auto">
+                <Link
+                    className="flex flex-row gap-3 items-center min-w-[200px]"
+                    href="/"
+                >
+                    <MdBloodtype size={36} />
+                    <Text className="text-4xl dexter-font whitespace-nowrap">
+                        BayHarbourDonor
                     </Text>
                 </Link>
 
@@ -104,7 +104,7 @@ export default function Navbar() {
 
                 <section className="flex flex-row gap-3 items-center min-w-[160px] justify-end">
                     <button
-                        className="bg-neutral-900/10 backdrop-blur-md p-3 rounded-full hover:bg-blood/80 transition-colors cursor-pointer flex-shrink-0 hover:shadow-lg hover:shadow-blood/20 hover:text-white"
+                        className="bg-tertairy backdrop-blur-md p-3 rounded-full hover:bg-blood/80 transition-colors cursor-pointer flex-shrink-0 hover:shadow-lg hover:shadow-blood/20 hover:text-white"
                         onClick={toggleTheme}
                     >
                         {isDarkMode ? (
@@ -114,13 +114,13 @@ export default function Navbar() {
                         )}
                     </button>
                     <button
-                        className="bg-neutral-900/10 backdrop-blur-md p-3 rounded-full hover:bg-blood/80 transition-colors cursor-pointer flex-shrink-0 hover:shadow-lg hover:shadow-blood/20 hover:text-white"
+                        className="bg-tertairy backdrop-blur-md p-3 rounded-full hover:bg-blood/80 transition-colors cursor-pointer flex-shrink-0 hover:shadow-lg hover:shadow-blood/20 hover:text-white"
                         onClick={toggleSearch}
                     >
                         <BiSearch size={20} />
                     </button>
                     <button
-                        className="bg-neutral-900/10 backdrop-blur-md p-3 rounded-full hover:bg-blood/80 transition-colors cursor-pointer flex-shrink-0 relative hover:shadow-lg hover:shadow-blood/20 hover:text-white"
+                        className="bg-tertairy backdrop-blur-md p-3 rounded-full hover:bg-blood/80 transition-colors cursor-pointer flex-shrink-0 relative hover:shadow-lg hover:shadow-blood/20 hover:text-white"
                         onClick={toggleNotifications}
                     >
                         <LuMail size={20} />

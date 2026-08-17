@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import "tailwindcss";
 
 :root {
-    --background: #efefef;
-    --foreground: #191919;
-    --tertairy: #242424;
-    --blood: #c8161e;
+    --background: #dddddd;
+    --foreground: #202020;
+    --tertairy: #333333;
+    --blood: #C5181A;
 }
 
 @theme inline {
@@ -19,10 +22,10 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #191919;
-        --foreground: #efefef;
+        --background: #202020;
+        --foreground: #dddddd;
         --tertairy: #c2c2c2;
-        --blood: #c8161e;
+        --blood: #C5181A;
     }
 }
 
@@ -32,8 +35,8 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    scrollbar-width: thin; 
-    scrollbar-color: #c8161e var(--background);
+    scrollbar-width: thin;
+    scrollbar-color: #C5181A var(--background);
 }
 
 body {
@@ -51,12 +54,36 @@ body {
         "Open Sans",
         "Helvetica Neue",
         sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
     overflow-x: hidden;
+}
+
+.dexter-font{
+    font-family: "Noto Sans ExtCond", system-ui;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    letter-spacing: 6px;
+    font-style: normal;
 }
 
 .im-fell-dw-pica-regular {
     font-family: "IM Fell DW Pica", serif;
     font-weight: 400;
+    font-style: normal;
+}
+
+.tagesschrift-regular {
+    font-family: "Tagesschrift", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.quicksand-regular {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
     font-style: normal;
 }
 
